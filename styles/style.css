@@ -30,3 +30,13 @@ th{
 [contenteditable="ture"]:focus{
     background-color: #f0f0f0;
 }
+
+.btn_export{
+    background-color: #08AB47;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: none;
+}
