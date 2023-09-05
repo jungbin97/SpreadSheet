@@ -1,0 +1,15 @@
+#spreadsheet {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#spreadsheet td, #spreadsheet th {
+    border: 1px solid black;
+    padding: 8px;
+    min-width: 10px;
+    text-align: center;
+}
+
+[contenteditable="ture"]:focus{
+    background-color: #f0f0f0;
+}
