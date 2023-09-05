@@ -3,125 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <title>Spread Sheet</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <header>
-    <button class="export">Export Spreadsheet</button>
-
+    <button class="btn_export">Export Spreadsheet</button>
+    <div class="cell_position_container">Cell: <span id="cell_position"></span></div>
 </header>
-<table id = 'spreadsheet'>
-    <tr>
-        <th></th>
-        <th>A</th>
-        <th>B</th>
-        <th>C</th>
-        <th>D</th>
-        <th>E</th>
-        <th>F</th>
-        <th>G</th>
-        <th>H</th>
-        <th>I</th>
-    </tr>
-    <!--반복문 돌려서 js로 렌더링 해도 될듯..?-->
-    <tr>
-        <th>1</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <th>2</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <th>3</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <th>4</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <th>5</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <th>6</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <th>7</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <th>9</th>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-
+<table class = "spreadsheet">
+        <!--반복문 돌려서 js로 렌더링 해도 될듯..?-->
+<!--    <tr>-->
+<!--        <th></th>-->
+<!--        <th>A</th>-->
+<!--        <th>B</th>-->
+<!--        <th>C</th>-->
+<!--        <th>D</th>-->
+<!--        <th>E</th>-->
+<!--        <th>F</th>-->
+<!--        <th>G</th>-->
+<!--        <th>H</th>-->
+<!--        <th>I</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>1</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>2</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>3</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>4</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>5</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>6</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>7</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>9</th>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--        <td contenteditable="true"></td>-->
+<!--    </tr>-->
 </table>
-<script src="scripts/"></script>
 </body>
+<script src="scripts/script.js"></script>
+<script src="scripts/xlsx.js"></script>
 </html>

@@ -1,14 +1,31 @@
-#spreadsheet {
+.spreadsheet {
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
+
 }
 
-#spreadsheet td, #spreadsheet th {
-    border: 1px solid black;
+th, td {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ddd;
     padding: 8px;
     min-width: 10px;
     text-align: center;
 }
+input{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+
+th{
+    /*헤더 배경색*/
+    background-color: #f2f2f2;
+}
+
 
 [contenteditable="ture"]:focus{
     background-color: #f0f0f0;
