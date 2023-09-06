@@ -33,6 +33,9 @@ html로 작성해도 되지만 table안에 행과 열(셀)들이 반복되어 �
 ![image](https://github.com/jungbin97/SpreadSheet/assets/57621519/205bb070-6e1c-4e36-ad4f-dc48b3b78f28)
 
 ## 행 열 헤드(첫번째 행, 첫번째 열) 부분이 xlsx 파일에도 반영되는 버그
+
+![image](https://github.com/jungbin97/SpreadSheet/assets/57621519/d660093c-4459-49eb-a92c-18ca4d931cc8)
+
 `XLSX.utils.table_to_sheet()` 함수가 테이블의 모든 셀을 포함하여 xlsx파일로 변환하기 때문에 행 헤더 부분과 열 헤더부분이 포함되는 버그가 발생
 
 원본테이블을 `clonedTable`에 복사하고, 복사한 테이블을 위쪽 헤더(열 헤더), 왼쪽 헤더(행 헤더)를 삭제 후 table_to_sheet()함수에 넘겨줌
