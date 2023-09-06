@@ -9,6 +9,7 @@ const headerRow = table.insertRow(0);
 headerRow.insertCell(0);
 headerRow.style.backgroundColor = '#f2f2f2';
 
+// 왼쪽 헤더(열 헤더) 생성하기
 for(let i = 1; i <=cols; i++){
     const cell = headerRow.insertCell(i);
     cell.style.backgroundColor = "#f2f2f2";
@@ -59,10 +60,21 @@ function exportToExcel() {
         }
     }
 
+    // table을 clonedTable에 복사
+    const clonedTable = table.cloneNode(true);
+
+    // 위쪽 헤더 제거
+    clonedTable.deleteRow(0);
+    // 왼쪽 헤더 제거
+    for (let i =0; i < rows; i++){
+        clonedTable.rows[i].deleteCell(0);
+    }
+
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.table_to_sheet(table);
+    const ws = XLSX.utils.table_to_sheet(clonedTable);
     XLSX.utils.book_append_sheet(wb, ws, "sheet1");
     XLSX.writeFile(wb, "spreadsheet.xlsx");
+
 
     // 다시 input 요소를 셀에 추가 및 기존의 focus 이벤트 리스너 추가
     for (let i = 1; i <= rows; i++) {
