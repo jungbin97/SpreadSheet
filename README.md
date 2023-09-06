@@ -36,4 +36,5 @@ html로 작성해도 되지만 table안에 행과 열(셀)들이 반복되어 �
 `XLSX.utils.table_to_sheet()` 함수가 테이블의 모든 셀을 포함하여 xlsx파일로 변환하기 때문에 행 헤더 부분과 열 헤더부분이 포함되는 버그가 발생
 
 원본테이블을 `clonedTable`에 복사하고, 복사한 테이블을 위쪽 헤더(열 헤더), 왼쪽 헤더(행 헤더)를 삭제 후 table_to_sheet()함수에 넘겨줌
+
 ![image](https://github.com/jungbin97/SpreadSheet/assets/57621519/0305d67b-17d5-4bf0-8307-c8766d4b3dff)
